@@ -30,7 +30,7 @@
 - [x] `npm run build` を実行し、ビルドが成功することを確認する
 
 ## 5. UI改修
-- [ ] `AttackAnimation` コンポーネントをFigmaデザインに近づける
 - [ ] `StartScreen` コンポーネントをFigmaデザインに近づける
 - [ ] `QuizScreen` コンポーネントをFigmaデザインに近づける
 - [ ] `ResultScreen` コンポーネントをFigmaデザインに近づける
+- [ ] `AttackAnimation` コンポーネントをFigmaデザインに近づける

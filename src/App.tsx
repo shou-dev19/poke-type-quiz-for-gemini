@@ -97,7 +97,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 to-indigo-900 flex items-center justify-center p-4">
       {appState === 'start' && (
         <StartScreen onStart={handleStart} />
       )}
