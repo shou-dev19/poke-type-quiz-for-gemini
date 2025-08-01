@@ -4,8 +4,7 @@ import {
   Difficulty, 
   DamageMultiplier, 
   POKEMON_TYPES, 
-  TYPE_EFFECTIVENESS, 
-  DUAL_TYPES 
+  TYPE_EFFECTIVENESS 
 } from '../types/pokemon';
 
 export function calculateDamage(
@@ -59,7 +58,12 @@ export function generateQuestions(difficulty: Difficulty, count: number): QuizQu
         attackType = POKEMON_TYPES[Math.floor(Math.random() * POKEMON_TYPES.length)];
         if (Math.random() < 0.4) {
           // 40%の確率で複合タイプ
-          defendType = DUAL_TYPES[Math.floor(Math.random() * DUAL_TYPES.length)];
+          let type1 = POKEMON_TYPES[Math.floor(Math.random() * POKEMON_TYPES.length)];
+          let type2 = POKEMON_TYPES[Math.floor(Math.random() * POKEMON_TYPES.length)];
+          while (type1 === type2) {
+            type2 = POKEMON_TYPES[Math.floor(Math.random() * POKEMON_TYPES.length)];
+          }
+          defendType = [type1, type2];
         } else {
           defendType = POKEMON_TYPES[Math.floor(Math.random() * POKEMON_TYPES.length)];
         }
